@@ -1,6 +1,7 @@
 import random
 
-class Player():
+
+class Player:
 
     def __init__(self, money):
         self.money = money
@@ -66,7 +67,8 @@ class Player():
     def __str__(self):
         return f"The player has {self.money} moneys, currently."
 
-class Card():
+
+class Card:
 
     def __init__(self, suit, face):
         self.suit = suit
@@ -79,7 +81,8 @@ class Card():
     def give_value(self):
         return self.value
 
-class Deck():
+
+class Deck:
 
     def __init__(self):
 
@@ -139,8 +142,8 @@ class Dealer():
 
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
 faces = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
-values = {'Two':2, 'Three':3, 'Four':4, 'Five':5, 'Six':6, 'Seven':7, 'Eight':8,
-            'Nine':9, 'Ten':10, 'Jack':10, 'Queen':10, 'King':10, 'Ace':11}
+values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eight': 8,
+            'Nine': 9, 'Ten': 10, 'Jack': 10, 'Queen': 10, 'King': 10, 'Ace': 11}
 
 buyin = 'unknown'
 
@@ -258,7 +261,6 @@ while gambling == True:
 
             elif down_doubled == True and gambler.hand_total() <= 21 and gambler.hand_total() > the_dealer.hand_total():
                 gambler.doubled_down_won()
-
 
             else:
                 gambler.wins_hand()
